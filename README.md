@@ -5,81 +5,81 @@
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=nodedotjs)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql)
 
-**LAKSAN** adalah Sistem Informasi Layanan Akses Sertifikasi dan Inspeksi yang dikembangkan khusus untuk **Balai Besar Pengawas Obat dan Makanan (BBPOM) di Palembang**. 
+**LAKSAN** is an Information System for Certification and Inspection Services specifically developed for the **Balai Besar Pengawas Obat dan Makanan (BBPOM) in Palembang** (Indonesian Food and Drug Authority).
 
-Sistem berbasis *web* ini bertujuan untuk mendigitalisasi proses birokrasi permohonan sertifikasi/inspeksi sarana dan mempermudah pelaporan Tindakan Perbaikan dan Pencegahan (CAPA / *GAP Analysis*) oleh Pelaku Usaha secara interaktif dan *paperless*.
+This web-based system aims to digitize the bureaucracy of certification/inspection applications and streamline the reporting of Corrective and Preventive Actions (CAPA / GAP Analysis) by Business Actors in an interactive and paperless manner.
 
-## 🌟 Fitur Utama
+## 🌟 Key Features
 
-Aplikasi LAKSAN mengadopsi arsitektur keamanan **Role-Based Access Control (RBAC)** yang membagi wewenang ke dalam 4 entitas pengguna:
+The LAKSAN application adopts a **Role-Based Access Control (RBAC)** security architecture that divides authority into 4 user entities:
 
-1. **Pelaku Usaha (Eksternal):**
-   - Registrasi akun mandiri.
-   - Pengajuan permohonan Sertifikasi dan Inspeksi Sarana.
-   - Pemantauan status permohonan secara *real-time*.
-   - Pengisian formulir evaluasi CAPA secara interaktif beserta fitur *upload* bukti perbaikan (gambar/PDF).
-   - Pengunduhan Sertifikat elektronik.
-2. **Petugas (Internal):**
-   - Peninjauan dokumen permohonan masuk.
-   - Pemberian evaluasi dan *GAP Analysis* kepada Pelaku Usaha.
+1. **Business Actor / Pelaku Usaha (External):**
+   - Self-service account registration.
+   - Submission of Certification and Facility Inspection applications.
+   - Real-time application status monitoring.
+   - Interactive CAPA evaluation form submission with evidence upload feature (Image/PDF).
+   - Downloading electronic certificates.
+2. **Officer / Inspector (Internal):**
+   - Reviewing incoming application documents.
+   - Providing evaluations and GAP Analysis to Business Actors.
 3. **Supervisor (Internal):**
-   - Peninjauan hasil evaluasi petugas lapangan.
-   - Pemberian persetujuan akhir dan penerbitan sertifikat.
+   - Reviewing field officers' evaluation results.
+   - Providing final approval and issuing certificates.
 4. **Administrator (Internal):**
-   - Pusat kendali (*Back-Office*) manajemen akun pegawai.
-   - Pengaturan *Role* dan Hak Akses sistem.
+   - Back-Office control center for employee account management.
+   - Managing system Roles and Access Rights.
 
-## 🛠️ Teknologi yang Digunakan (Tech Stack)
+## 🛠️ Technology Stack
 
-Proyek ini dibangun menggunakan pendekatan *Full-Stack JavaScript*:
+This project is built using a Full-Stack JavaScript approach:
 
 * **Frontend:** React.js (Vite), HTML5, CSS3.
 * **Backend:** Node.js, Express.js (RESTful API).
 * **Database:** MySQL (Relational Database).
-* **Security:** JSON Web Tokens (JWT) untuk autentikasi sesi, Bcrypt untuk enkripsi kata sandi.
+* **Security:** JSON Web Tokens (JWT) for session authentication, Bcrypt for password hashing.
 
-## 🚀 Panduan Instalasi (Menjalankan secara Lokal)
+## 🚀 Installation Guide (Running Locally)
 
-Ikuti langkah-langkah berikut untuk menjalankan sistem LAKSAN di komputer lokal Anda:
+Follow these steps to run the LAKSAN system on your local machine:
 
-### 1. Persiapan Database
-1. Pastikan Anda telah menginstal **XAMPP** (atau server MySQL lainnya).
-2. Jalankan modul **Apache** dan **MySQL** di XAMPP Control Panel.
-3. Buat database baru di phpMyAdmin (misal: `laksan_db`).
-4. *Import* file skema database yang ada di folder `database/schema.sql` ke dalam database tersebut.
+### 1. Database Setup
+1. Ensure you have **XAMPP** (or any other MySQL server) installed.
+2. Start the **Apache** and **MySQL** modules in the XAMPP Control Panel.
+3. Create a new database in phpMyAdmin (e.g., `laksan_db`).
+4. Import the database schema file located at `database/schema.sql` into the created database.
 
-### 2. Konfigurasi Backend
-1. Buka terminal/CMD dan arahkan ke folder `backend`.
+### 2. Backend Configuration
+1. Open terminal/CMD and navigate to the `backend` directory.
    ```bash
    cd backend
    ```
-2. Instal semua dependensi:
+2. Install all dependencies:
    ```bash
    npm install
    ```
-3. Ubah nama file `.env.example` menjadi `.env`, lalu sesuaikan kredensial database Anda (seperti nama database dan password).
-4. Jalankan server backend:
+3. Rename the `.env.example` file to `.env`, then adjust your database credentials (DB_NAME, DB_USER, DB_PASSWORD).
+4. Start the backend server:
    ```bash
    npm run dev
    ```
 
-### 3. Konfigurasi Frontend
-1. Buka terminal baru (biarkan terminal backend tetap berjalan) dan arahkan ke folder `frontend`.
+### 3. Frontend Configuration
+1. Open a new terminal (keep the backend terminal running) and navigate to the `frontend` directory.
    ```bash
    cd frontend
    ```
-2. Instal semua dependensi:
+2. Install all dependencies:
    ```bash
    npm install
    ```
-3. Jalankan aplikasi web:
+3. Run the web application:
    ```bash
    npm run dev
    ```
-4. Buka *browser* Anda dan akses URL yang diberikan (biasanya `http://localhost:5173`).
+4. Open your browser and access the provided URL (usually `http://localhost:5173`).
 
-## 👨‍💻 Pengembang
-Dikembangkan oleh **Rahmad Ramadan** sebagai bagian dari pelaksanaan Kerja Praktik di Balai Besar Pengawas Obat dan Makanan (BBPOM) di Palembang (Tahun 2026).
+## 👨‍💻 Developer
+Developed by **Rahmad Ramadan** as part of an Internship Program at the Balai Besar Pengawas Obat dan Makanan (BBPOM) in Palembang (2026).
 
 ---
 *© 2026 LAKSAN BBPOM Palembang. All rights reserved.*
